@@ -1,0 +1,48 @@
+{% extends "sample_app/base.html" %}
+{% block content %}
+
+
+<!--<h3>Enter the credentials to connect to the VCenter</h3>-->
+
+<form action="/sample_app/vcenter_creds/" method="POST">
+    {% csrf_token %}
+
+    <div class="jumbotron">
+        <h2 class="text-muted"><u>ENVIRONMENT DEPLYOYMENT</u></h2>
+        <h3>VCenter Connection:</h3>
+        <h5>Enter the credentials to connect to the VCenter</h5>
+        <div class="form-group row ">
+            <label for="hostname" class="col-sm-2 col-form-label">HOST NAME</label>
+            <div class="col-sm-10">
+                <!--<input type="number" class="form-control w-50 p-3" id="hostname" name="vcenter_ip"-->
+                       <!--placeholder="Host Name">-->
+                <input type="text" minlength="7" maxlength="15" size="15"
+                       pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
+                       class="form-control w-50 p-3" id="hostname" name="vcenter_ip"
+                       placeholder="Host Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="user_email" class="col-sm-2 col-form-label">USERNAME</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control w-50 p-3" id="user_email" name="username"
+                       placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="user_password" class="col-sm-2 col-form-label">PASSWORD</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control w-50 p-3" id="user_password" name="password"
+                       placeholder="Password">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+{% endblock content %}
