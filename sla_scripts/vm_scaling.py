@@ -11,7 +11,8 @@ class VCenterconnection(object):
     A class which contains the supported functions for VcenterOperations module.
     """
     def __init__(self, hostname, username, password):
-        self.conn = self.connect_to_vcenter(hostname, username, password)
+        self.flag = 0
+        self.conn = self.connect_to_vcenter(hostname, username, password,)
 
     def connect_to_vcenter(self, hostname=None, username=None, password=None, certFile=None):
         """
@@ -23,6 +24,7 @@ class VCenterconnection(object):
                     password: password for specified username.
                     certFile: Optional
         """
+
         if not certFile:
             try:
                 _create_unverified_https_context = ssl._create_unverified_context
@@ -42,9 +44,13 @@ class VCenterconnection(object):
                     username: %s and password: %s" % (hostname, username, password)
             log.error("Failed to connect to Vcenter {0} using credentials \
                           username: {1} and password: {2}".format(hostname, username, password))
-            raise Exception(msg)
+            self.flag = 1
+            return self.flag, msg
+            # raise Exception(msg)
         except Exception as error:
             msg = "Unable to connect to Vcenter %s because of %s" % (hostname, error)
             log.error(msg)
-            raise Exception(msg)
+            self.flag = 1
+            # raise Exception(msg)
+            return self.flag, msg
             # return msg

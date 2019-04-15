@@ -19,9 +19,11 @@ def vcenter_creds(request):
     username = request.POST['username']
     password = request.POST['password']
     obj = vm_scaling.VCenterconnection(hostname, username, password)
-    msg = obj.conn
-    return HttpResponse(msg)
-
+    if obj.flag is not 1:
+        msg = obj.conn
+        return HttpResponse(msg)
+    else:
+        return render(request, 'sample_app/scale_vm.html')
 
 # def search(request):
 #     if 'q' in request.GET:
