@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
-from sample_app import file_handler
+# from sample_app import file_handler
 from sla_scripts import vm_scaling
 
 
@@ -19,11 +19,15 @@ def vcenter_creds(request):
     username = request.POST['username']
     password = request.POST['password']
     obj = vm_scaling.VCenterconnection(hostname, username, password)
-    if obj.flag is not 1:
-        msg = obj.conn
-        return HttpResponse(msg)
-    else:
-        return render(request, 'sample_app/scale_vm.html')
+    print(dir(obj))
+    msg1 = "Success"
+    # msg2 = obj.conn.msg1
+    return HttpResponse(msg1)
+    # if obj.flag is not 1:
+    #     msg = obj.conn
+    #     return HttpResponse(msg)
+    # else:
+    #     return render(request, 'sample_app/scale_vm.html')
 
 # def search(request):
 #     if 'q' in request.GET:

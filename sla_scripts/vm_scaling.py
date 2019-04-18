@@ -10,9 +10,10 @@ class VCenterconnection(object):
     """
     A class which contains the supported functions for VcenterOperations module.
     """
+
     def __init__(self, hostname, username, password):
         self.flag = 0
-        self.conn = self.connect_to_vcenter(hostname, username, password,)
+        self.conn = self.connect_to_vcenter(hostname, username, password, )
 
     def connect_to_vcenter(self, hostname=None, username=None, password=None, certFile=None):
         """
@@ -38,7 +39,9 @@ class VCenterconnection(object):
         try:
             self.connect = SmartConnect(host=hostname,
                                         user=username, pwd=password, certFile=certFile)
-            return self.connect
+            msg = "Successfull connection"
+            print(msg)
+            return self.connect, msg
         except vim.fault.InvalidLogin as error:
             msg = "Failed to connect to Vcenter %s using credentials \
                     username: %s and password: %s" % (hostname, username, password)
