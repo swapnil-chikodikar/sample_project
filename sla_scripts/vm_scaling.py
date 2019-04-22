@@ -92,7 +92,7 @@ class VCenterconnection(object):
         WARNING:: template and datastore host must be same.
         """
         try:
-            print 'VM creation in-progress'
+            print('VM creation in-progress')
             cluster = self.get_dc_object([vim.ComputeResource], esx_host)
             host = self.get_dc_object([vim.HostSystem], esx_host)
             if cluster == None:
@@ -120,43 +120,45 @@ class VCenterconnection(object):
                     time.sleep(1)
                 status = task.info.state
                 if status == "success":
-                    print "VM created successfully."
+                    print("VM created successfully.")
                 if status == "error":
-                    print task.info.error.msg
-                    print task.info.error
+                    print(task.info.error.msg)
+                    print(task.info.error)
                     raise task.info.error
                 return status
 
             except Exception as error:
-                print error
+                print(error)
 
         except Exception as error:
-            print error.message
+            print(error.message)
             raise error
 
-    def scale_vm(self, esx_host, dc_name, ds_name, temp_name, new_vm):
+    def scale_vm(self, esx_host, dc_name, ds_name, temp_name, new_vm, numofvms):
         """
         used to Scale virtual machines using templates.
 
         - **parameters**, **types**, **return** and **return types**::
 
         """
-
         try:
-            for i in range(31, 33):
+            # for i in range(31, 33):
+            for i in range(numofvms):
                 # obj = VCenterconnection()
                 # self.template_vm('192.168.246.40', 'CRVS-Datacenter', 'CRVS-Datastore-Cluster',
                 #                  'CRVS-RHEL6.5-Template', 'rhel6-test{}'.format(i))
-                self.template_vm(esx_host, dc_name, ds_name, temp_name, new_vm)
+                new_vm = new_vm + "%s" % i
+                self.template_vm(esx_host, dc_name, ds_name, temp_name,new_vm)
                 time.sleep(2)
                 # self.remove_nic('ravi-automation-test{}'.format(i))
                 time.sleep(1)
                 # self.add_nic('ravi-automation-test{}'.format(i), 'VLAN222-crsrsla-prod')
             time.sleep(5)
-            for j in range(31, 33):
-                self.poweron_vm('rhel6-test{}'.format(j))
+            for j in range(numofvms):
+                new_vm = new_vm + "%s" % j
+                self.poweron_vm(new_vm)
         except Exception as error:
-            print error.message
+            print(error.message)
             raise error
 
     def poweron_vm(self, name_of_vm):
@@ -177,11 +179,11 @@ class VCenterconnection(object):
             time.sleep(1)
         status = task.info.state
         if status == "success":
-            print 'VM powered ON successfully'
+            print('VM powered ON successfully')
         if status == "error":
-            print "Error: could not power on VM successfully"
-            print task.info.error.msg
-            print task.info.error
+            print("Error: could not power on VM successfully")
+            print(task.info.error.msg)
+            print(task.info.error)
             raise task.info.error
         return status
 
