@@ -112,8 +112,7 @@ class VCenterconnection(object):
                 # relospec.host = target_host
                 cloneSpec = vim.vm.CloneSpec(powerOn=False, template=False, location=relospec,
                                              customization=None, config=None)
-                task = template_vm.Clone(name=new_vm, folder=datacenter.vmFolder, \
-                                         spec=cloneSpec)
+                task = template_vm.Clone(name=new_vm, folder=datacenter.vmFolder, spec=cloneSpec)
                 states = [vim.TaskInfo.State.success, vim.TaskInfo.State.error]
 
                 while task.info.state not in states:
@@ -148,7 +147,7 @@ class VCenterconnection(object):
                 # self.template_vm('192.168.246.40', 'CRVS-Datacenter', 'CRVS-Datastore-Cluster',
                 #                  'CRVS-RHEL6.5-Template', 'rhel6-test{}'.format(i))
                 new_vm = new_vm + "%s" % i
-                self.template_vm(esx_host, dc_name, ds_name, temp_name,new_vm)
+                self.template_vm(esx_host, dc_name, ds_name, temp_name, new_vm)
                 time.sleep(2)
                 # self.remove_nic('ravi-automation-test{}'.format(i))
                 time.sleep(1)
