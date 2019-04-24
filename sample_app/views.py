@@ -51,6 +51,7 @@ def vm_deployment(request):
     dc_name = request.POST['dc_name']
     ds_name = request.POST['ds_name']
     temp_name = request.POST['temp_name']
+    s_range = int(request.POST['s_range'])
+    e_range = int(request.POST['e_range'])
     new_vm = request.POST['new_vm']
-    numofvms = int(request.POST['numofvms'])
-    obj.scale_vm(esx_host, dc_name, ds_name, temp_name, new_vm, numofvms)
+    obj.scale_vm(esx_host, dc_name, ds_name, temp_name, s_range, e_range, new_vm)

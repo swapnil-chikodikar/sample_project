@@ -133,7 +133,7 @@ class VCenterconnection(object):
             print(error.message)
             raise error
 
-    def scale_vm(self, esx_host, dc_name, ds_name, temp_name, new_vm, numofvms):
+    def scale_vm(self, esx_host, dc_name, ds_name, temp_name, s_range, e_range, new_vm):
         """
         used to Scale virtual machines using templates.
 
@@ -142,7 +142,7 @@ class VCenterconnection(object):
         """
         try:
             # for i in range(31, 33):
-            for i in range(numofvms):
+            for i in range(s_range, e_range):
                 # obj = VCenterconnection()
                 # self.template_vm('192.168.246.40', 'CRVS-Datacenter', 'CRVS-Datastore-Cluster',
                 #                  'CRVS-RHEL6.5-Template', 'rhel6-test{}'.format(i))
@@ -153,7 +153,7 @@ class VCenterconnection(object):
                 time.sleep(1)
                 # self.add_nic('ravi-automation-test{}'.format(i), 'VLAN222-crsrsla-prod')
             time.sleep(5)
-            for j in range(numofvms):
+            for j in range(s_range, e_range):
                 new_vm = new_vm + "%s" % j
                 self.poweron_vm(new_vm)
         except Exception as error:
