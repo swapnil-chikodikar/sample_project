@@ -1,6 +1,7 @@
 {% extends "sample_app/base.html" %}
 {% block content %}
 
+
 <div class="mx-auto" style="width: 600px;">
     <div class="card mb-4 border">
         <div class="card-body" align="center">
@@ -8,7 +9,8 @@
             <h4 class="card-title">VM Creation</h4>
             <br>
 
-            <form class="needs-validation" method="POST" novalidate action="/sample_app/deployment/">
+            <form class="needs-validation" method="POST" action="/sample_app/deployment/"
+                  onsubmit="btn.disabled=true; btn.innerText='Deploying VMs. Please Wait'; img.style.display=inline">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
@@ -79,11 +81,28 @@
                         Please provide a valid VM Name.
                     </div>
                 </div>
-                <button id="btn" class="btn btn-primary" type="submit">DEPLOY</button>
+                <button id="btn" class="btn btn-primary" type="submit">DEPLOY
+                </button>
+                <!--<input type="submit" name="Submit" value="Deploy" onclick="this.disabled=true; this.value='Please Wait...';" />-->
+                <!--<div id="loadpage"-->
+                <!--style="display: none; position:relative; left:0px; top:0px; background-color:white; layer-background-color:white; height:100%; width:100%;">-->
+                <!--<p id="p" align="center" style="font-size: large;">-->
+                <!--<img src="spinner.gif">-->
+                <!--<B>Loading ... ... Please wait!</B>-->
+                <!--</p>-->
+                <!--</div>-->
+                <!--<div id="load"-->
+                     <!--style=" position:relative; left:0px; top:0px; background-color:white; layer-background-color:white; height:100%; width:100%;">-->
+                    <!--<input type="image" value="...Please wait..." src="spinner.gif" id="img" align="center"-->
+                           <!--style="display: none; font-size: large;"/>-->
+                <!--</div>-->
             </form>
+
         </div>
     </div>
+
 </div>
+
 <br>
 
 {% endblock content %}

@@ -1,0 +1,48 @@
+{% extends "sample_app/base.html" %}
+{% block content %}
+<div class="mx-auto" style="width: 600px;">
+    <div class="mycard mb-4 border border-primary">
+        <div class="card-body" align="center">
+            <h2 class="card-title">Add new NIC to Virtual Machine</h2>
+            <!--<h4 class="card-title">VM Creation</h4>-->
+            <br>
+            <form method="post" action="/sample_app/add_nic/" role="form" id="form_id">
+                <div class="form-group row">
+                    <label for="vm_name" class="col-5 col-form-label col-form-label-lg">VM Name</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control form-control-lg" id="vm_name"
+                               name="vm_name" placeholder="eg. Template_name-test">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip04">Start Range</label>
+                        <input type="number" min="0" class="form-control" id="validationTooltip04" placeholder="0"
+                               name="s_range" required>
+                        <div class="invalid-tooltip">
+                            Please select at least one VM.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip05">End Range</label>
+                        <input type="number" min="0" class="form-control" id="validationTooltip05" placeholder="0"
+                               name="e_range" required>
+                        <div class="invalid-tooltip">
+                            Please select at least one VM.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="port_name" class="col-5 col-form-label col-form-label-lg">Port Group Name</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control form-control-lg" id="port_name"
+                               name="port_grp" placeholder="port name">
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="buttonid" type="button" onclick="my_test">Add NIC</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

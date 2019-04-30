@@ -1,0 +1,51 @@
+{% extends "sample_app/base.html" %}
+{% block content %}
+<div class="mx-auto" style="width: 600px;">
+    <div class="card mb-4 border">
+        <div class="card-body" align="center">
+            <h2 class="card-title">VM Deletion</h2>
+            <!--<h4 class="card-title"></h4>-->
+            <br>
+            <form class="needs-validation" method="POST" action="/sample_app/assignIP/"
+                  onsubmit="btn.disabled=true; btn.innerText='Deleting VMs. Please Wait'; img.style.display=inline">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationTooltip06">VM Name</label>
+                        <input type="text" class="form-control" id="validationTooltip06"
+                               placeholder="eg. Template_name-test"
+                               name="vm_name" required>
+                        <div class="invalid-tooltip">
+                            Please provide a valid VM Name.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip04">Start Range</label>
+                        <input type="number" min="0" class="form-control" id="validationTooltip04" placeholder="0"
+                               name="s_range" required>
+                        <div class="invalid-tooltip">
+                            Please select at least one VM.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip05">End Range</label>
+                        <input type="number" min="0" class="form-control" id="validationTooltip05" placeholder="0"
+                               name="e_range" required>
+                        <div class="invalid-tooltip">
+                            Please select at least one VM.
+                        </div>
+                    </div>
+                </div>
+                <button id="btn" class="btn btn-primary" type="submit">DELETE
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+
+{% endblock content %}
