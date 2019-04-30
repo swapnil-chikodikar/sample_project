@@ -63,7 +63,7 @@ def vm_delete(request):
 
 
 def assign_ips_form(request):
-    return render(request, 'sample_app/asign_ip.html')
+    return render(request, 'sample_app/assign_ip.html')
 
 
 def assign_ips(request):
@@ -91,7 +91,6 @@ def add_nic(request):
             new_name = vm_name + "%s" % i
             obj.remove_nic(new_name)
             obj.add_nic(new_name, port_grp)
-
         return render(request, 'sample_app/AddNicForm/')
     except Exception as error:
         print(error.message)

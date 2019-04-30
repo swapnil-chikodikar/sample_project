@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf0492b3-56ec-4e15-8422-954c93a5e983" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sample_app/static/sas_img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2/test.py" afterPath="$PROJECT_DIR$/app2/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/urls.py" afterPath="$PROJECT_DIR$/sample_app/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/views.py" afterPath="$PROJECT_DIR$/sample_app/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sla_scripts/vm_scaling.py" afterPath="$PROJECT_DIR$/sla_scripts/vm_scaling.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +28,8 @@
       <file leaf-file-name="assign_ip.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+            <state relative-caret-position="220">
+              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -89,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+              <caret line="74" column="46" lean-forward="false" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -101,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_nic.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_nic.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="420">
+              <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -169,11 +161,11 @@
         <option value="$PROJECT_DIR$/app2/test.py" />
         <option value="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" />
         <option value="$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" />
         <option value="$PROJECT_DIR$/sample_app/urls.py" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" />
         <option value="$PROJECT_DIR$/sla_scripts/vm_scaling.py" />
         <option value="$PROJECT_DIR$/sample_app/views.py" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" />
       </list>
     </option>
   </component>
@@ -403,7 +395,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.49514562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2971098" sideWeight="0.49271846" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2971098" sideWeight="0.49271846" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -703,26 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sla_scripts/vm_scaling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
@@ -736,9 +708,29 @@
     <entry file="file://$PROJECT_DIR$/sample_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+          <caret line="74" column="46" lean-forward="false" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
