@@ -7,6 +7,7 @@
             <!--<h4 class="card-title">VM Creation</h4>-->
             <br>
             <form method="post" action="/sample_app/add_nic/" role="form" id="form_id">
+                {% csrf_token %}
                 <div class="form-group row">
                     <label for="vm_name" class="col-5 col-form-label">VM Name</label>
                     <div class="col-7">
