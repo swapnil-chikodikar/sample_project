@@ -57,7 +57,7 @@
                     <div class="col-md-4 mb-3">
                         <label for="validationTooltip04">Start Range</label>
                         <input type="number" min="0" class="form-control" id="validationTooltip04" placeholder="0"
-                               name="s_range" required>
+                               onselect="validationTooltip05.min=validationTooltip04.val" name="s_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
                         </div>
@@ -65,7 +65,7 @@
 
                     <div class="col-md-4 mb-3">
                         <label for="validationTooltip05">End Range</label>
-                        <input type="number" min="0" class="form-control" id="validationTooltip05" placeholder="0"
+                        <input type="number" class="form-control" id="validationTooltip05" placeholder="0"
                                name="e_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.

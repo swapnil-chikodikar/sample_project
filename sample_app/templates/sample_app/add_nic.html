@@ -8,38 +8,39 @@
             <br>
             <form method="post" action="/sample_app/add_nic/" role="form" id="form_id">
                 <div class="form-group row">
-                    <label for="vm_name" class="col-5 col-form-label col-form-label-lg">VM Name</label>
+                    <label for="vm_name" class="col-5 col-form-label">VM Name</label>
                     <div class="col-7">
-                        <input type="text" class="form-control form-control-lg" id="vm_name"
+                        <input type="text" class="form-control" id="vm_name"
                                name="vm_name" placeholder="eg. Template_name-test">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="port_name" class="col-5 col-form-label">Port Group Name</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control" id="port_name"
+                               name="port_grp" placeholder="port name">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label for="validationTooltip04">Start Range</label>
-                        <input type="number" min="0" class="form-control" id="validationTooltip04" placeholder="0"
+                        <label for="start_range" class="col-5 col-form-label">Start Range</label>
+                        <input type="number" min="0" class="form-control" id="start_range" placeholder="0"
                                name="s_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="validationTooltip05">End Range</label>
-                        <input type="number" min="0" class="form-control" id="validationTooltip05" placeholder="0"
+                        <label for="end_range" class="col-5 col-form-label">End Range</label>
+                        <input type="number" min="0" class="form-control" id="end_range" placeholder="0"
                                name="e_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
                         </div>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="port_name" class="col-5 col-form-label col-form-label-lg">Port Group Name</label>
-                    <div class="col-7">
-                        <input type="text" class="form-control form-control-lg" id="port_name"
-                               name="port_grp" placeholder="port name">
-                    </div>
-                </div>
-                <button class="btn btn-primary" id="buttonid" type="button" onclick="my_test">Add NIC</button>
+
+                <button class="btn btn-primary" id="buttonid" type="button">Add NIC</button>
 
             </form>
         </div>

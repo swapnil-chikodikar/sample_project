@@ -7,6 +7,7 @@ from sla_scripts import vm_scaling
 obj = vm_scaling.VCenterconnection()
 
 
+
 def welcome_page(request):
     return render(request, 'sample_app/welcome.html')
 
@@ -40,11 +41,8 @@ def vm_deployment(request):
     s_range = int(request.POST['s_range'])
     e_range = int(request.POST['e_range'])
     new_vm = request.POST['new_vm']
-    try:
-        obj.scale_vm(esx_host, dc_name, ds_name, temp_name, s_range, e_range, new_vm)
-        return redirect('sample_app/DeploymentForm/')
-    except Exception as error:
-        print(error.message)
+    obj.scale_vm(esx_host, dc_name, ds_name, temp_name, s_range, e_range, new_vm)
+    return redirect('/sample_app/DeploymentForm/')
 
 
 def vm_delete_form(request):
@@ -57,7 +55,7 @@ def vm_delete(request):
     e_range = int(request.POST['e_range'])
     try:
         obj.Multi_vm_delete(vm_name, s_range, e_range)
-        return render(request, 'sample_app/VmDeleteForm/')
+        return render(request, 'sample_app/vm_delete.html')
     except Exception as error:
         print(error.message)
 
@@ -72,7 +70,7 @@ def assign_ips(request):
     e_range = int(request.POST['e_range'])
     try:
         obj.Multi_static_ips(vm_name, s_range, e_range)
-        return render(request, 'sample_app/AssignIPForm/')
+        return render(request, 'sample_app/assign_ip.html')
     except Exception as error:
         print(error.message)
 
@@ -91,6 +89,6 @@ def add_nic(request):
             new_name = vm_name + "%s" % i
             obj.remove_nic(new_name)
             obj.add_nic(new_name, port_grp)
-        return render(request, 'sample_app/AddNicForm/')
+        return render(request, 'sample_app/add_nic.html')
     except Exception as error:
         print(error.message)
