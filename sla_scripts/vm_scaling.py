@@ -529,7 +529,7 @@ class VCenterconnection(object):
         except Exception as error:
             print("Error in 'remove_nic' keyword... {} \n {}".format(error, error.message))
 
-    def Multi_static_ips(self, vm_name, s_range, e_range):
+    def Multi_static_ips(self, vm_name, ip_addr, s_range, e_range):
         """
         used to assign Static IPs to Multiple virtual machines
 
@@ -542,7 +542,8 @@ class VCenterconnection(object):
         try:
             for i in range(s_range, e_range):
                 new_name = vm_name + "%s" % i
-                self.assign_ip(new_name, '192.168.122.{}'.format(i))
+                new_ip = ip_addr + "%s" % i
+                self.assign_ip(new_name, new_ip)
         except Exception as error:
             print(error.message)
             raise error

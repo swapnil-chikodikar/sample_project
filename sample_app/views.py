@@ -7,7 +7,6 @@ from sla_scripts import vm_scaling
 obj = vm_scaling.VCenterconnection()
 
 
-
 def welcome_page(request):
     return render(request, 'sample_app/welcome.html')
 
@@ -20,13 +19,9 @@ def vcenter_creds(request):
     hostname = request.POST['vcenter_ip']
     username = request.POST['username']
     password = request.POST['password']
-    # obj_main.vcenter_login(hostname, username, password)
     obj.connect_to_vcenter(hostname, username, password)
     print(dir(obj))
-    msg1 = "Success"
-    # msg2 = obj.conn.msg1
-    # return HttpResponse(msg1)
-    return render(request, 'sample_app/deployment.html')
+    return redirect(request, '/RTOSLAAutomation/VcenterCredsForm/')
 
 
 def deployment_page_form(request):
@@ -42,7 +37,7 @@ def vm_deployment(request):
     e_range = int(request.POST['e_range'])
     new_vm = request.POST['new_vm']
     obj.scale_vm(esx_host, dc_name, ds_name, temp_name, s_range, e_range, new_vm)
-    return redirect('/sample_app/DeploymentForm/')
+    return redirect('/RTOSLAAutomation/DeploymentForm/')
 
 
 def vm_delete_form(request):
@@ -53,11 +48,8 @@ def vm_delete(request):
     vm_name = request.POST['vm_name']
     s_range = int(request.POST['s_range'])
     e_range = int(request.POST['e_range'])
-    try:
-        obj.Multi_vm_delete(vm_name, s_range, e_range)
-        return render(request, 'sample_app/vm_delete.html')
-    except Exception as error:
-        print(error.message)
+    obj.Multi_vm_delete(vm_name, s_range, e_range)
+    return redirect(request, '/RTOSLAAutomation/VmDeleteForm')
 
 
 def assign_ips_form(request):
@@ -66,13 +58,11 @@ def assign_ips_form(request):
 
 def assign_ips(request):
     vm_name = request.POST['vm_name']
+    ip_addr = request.POST['ip_addr']
     s_range = int(request.POST['s_range'])
     e_range = int(request.POST['e_range'])
-    try:
-        obj.Multi_static_ips(vm_name, s_range, e_range)
-        return render(request, 'sample_app/assign_ip.html')
-    except Exception as error:
-        print(error.message)
+    obj.Multi_static_ips(vm_name, ip_addr, s_range, e_range)
+    return redirect(request, '/RTOSLAAutomation/AssignIPForm/')
 
 
 def add_nic_form(request):
@@ -84,11 +74,9 @@ def add_nic(request):
     s_range = int(request.POST['s_range'])
     e_range = int(request.POST['e_range'])
     port_grp = request.POST['port_grp']
-    try:
-        for i in range(s_range, e_range):
-            new_name = vm_name + "%s" % i
-            obj.remove_nic(new_name)
-            obj.add_nic(new_name, port_grp)
-        return render(request, 'sample_app/add_nic.html')
-    except Exception as error:
-        print(error.message)
+    for i in range(s_range, e_range):
+        new_name = vm_name + "%s" % i
+        obj.remove_nic(new_name)
+        obj.add_nic(new_name, port_grp)
+    return redirect(request, '/RTOSLAAutomation/AddNicForm/')
+

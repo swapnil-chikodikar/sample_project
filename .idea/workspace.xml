@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="bf0492b3-56ec-4e15-8422-954c93a5e983" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2/test.py" afterPath="$PROJECT_DIR$/app2/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html" afterPath="$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_app/views.py" afterPath="$PROJECT_DIR$/sample_app/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample_project/urls.py" afterPath="$PROJECT_DIR$/sample_project/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sla_scripts/vm_scaling.py" afterPath="$PROJECT_DIR$/sla_scripts/vm_scaling.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,21 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="vcenter_creds.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vcenter_creds.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assign_ip.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+            <state relative-caret-position="640">
+              <caret line="32" column="90" lean-forward="false" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -43,13 +35,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_app/views.py">
+      <file leaf-file-name="add_nic.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-320">
-              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="180">
+              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="32" />
               <folding>
-                <element signature="e#24#63#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deployment.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-480">
+              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,42 +62,42 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample_app/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_project/settings.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-960">
-              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_nic.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="42" column="80" lean-forward="false" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
+            <state relative-caret-position="500">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#24#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vm_delete.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html">
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="34" column="63" lean-forward="true" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
+            <state relative-caret-position="140">
+              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1745#1751#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,9 +106,31 @@
       <file leaf-file-name="vm_scaling.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sla_scripts/vm_scaling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
-              <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="3546">
+              <caret line="659" column="21" lean-forward="false" selection-start-line="659" selection-start-column="21" selection-end-line="659" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vm_delete.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-80">
+              <caret line="8" column="82" lean-forward="false" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assign_ip.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,7 +163,6 @@
         <option value="$PROJECT_DIR$/sample_app/file_handler.py" />
         <option value="$PROJECT_DIR$/sample_app/templates/sample_app/search_form.html" />
         <option value="$PROJECT_DIR$/app2/templates/practice_form.html" />
-        <option value="$PROJECT_DIR$/sample_project/urls.py" />
         <option value="$PROJECT_DIR$/app2/templates/vcenter_login.html" />
         <option value="$PROJECT_DIR$/app2/forms.py" />
         <option value="$PROJECT_DIR$/app2/templates/app2/vcenter_login.html" />
@@ -146,21 +171,22 @@
         <option value="$PROJECT_DIR$/app2/urls.py" />
         <option value="$PROJECT_DIR$/sample_app/obj_main.py" />
         <option value="$PROJECT_DIR$/sample_app/static/narrow-jumbotron.css" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html" />
         <option value="$PROJECT_DIR$/sample_project/settings.py" />
         <option value="$PROJECT_DIR$/sample_app/abc.py" />
         <option value="$PROJECT_DIR$/sample_app/templates/sample_app/example.html" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html" />
-        <option value="$PROJECT_DIR$/sla_scripts/vm_scaling.py" />
         <option value="$PROJECT_DIR$/sample_app/urls.py" />
         <option value="$PROJECT_DIR$/app2/test.py" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html" />
         <option value="$PROJECT_DIR$/sample_app/apps.py" />
-        <option value="$PROJECT_DIR$/sample_app/views.py" />
-        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html" />
+        <option value="$PROJECT_DIR$/sla_scripts/vm_scaling.py" />
+        <option value="$PROJECT_DIR$/sample_project/urls.py" />
         <option value="$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html" />
         <option value="$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html" />
+        <option value="$PROJECT_DIR$/sample_app/views.py" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/base.html" />
+        <option value="$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html" />
       </list>
     </option>
   </component>
@@ -216,6 +242,12 @@
               <item name="sample_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="sample_project" type="462c0819:PsiDirectoryNode" />
               <item name="sample_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sample_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sample_project" type="462c0819:PsiDirectoryNode" />
+              <item name="sample_app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sample_project" type="b2602c69:ProjectViewProjectNode" />
@@ -573,52 +605,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/example.html" />
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app2/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="683">
           <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="68" column="47" lean-forward="true" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sla_scripts/vm_scaling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -657,56 +648,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sample_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sample_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sla_scripts/vm_scaling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3546">
+          <caret line="659" column="21" lean-forward="false" selection-start-line="659" selection-start-column="21" selection-end-line="659" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="8" column="82" lean-forward="false" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/deployment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#1745#1751#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="500">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/add_nic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="42" column="80" lean-forward="false" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
+        <state relative-caret-position="180">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/assign_ip.html">
+    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vcenter_creds.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample_app/templates/sample_app/vm_delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="63" lean-forward="true" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
+        <state relative-caret-position="640">
+          <caret line="32" column="90" lean-forward="false" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
