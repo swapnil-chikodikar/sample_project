@@ -529,12 +529,10 @@ class VCenterconnection(object):
         except Exception as error:
             print("Error in 'remove_nic' keyword... {} \n {}".format(error, error.message))
 
-    def Multi_static_ips(self, vm_name, ip_addr, s_range, e_range):
+    def Multi_static_ips(self, vm_name, ip_addr, s_range, e_range, subnet_mask, gateway, dns_list):
         """
         used to assign Static IPs to Multiple virtual machines
-
         - **parameters**, **types**, **return** and **return types**::
-
         :param vm_name: name of vm that has to be created
         :param vm_name: string
         :return: return status of deletion
@@ -542,13 +540,13 @@ class VCenterconnection(object):
         try:
             for i in range(s_range, e_range):
                 new_name = vm_name + "%s" % i
-                new_ip = ip_addr + "%s" % i
-                self.assign_ip(new_name, new_ip)
+                new_ip = ip_addr + ".%s" % i
+                self.assign_ip(new_name, new_ip, subnet_mask, gateway, dns_list)
         except Exception as error:
             print(error.message)
             raise error
 
-    def assign_ip(self, name_of_vm, ip):
+    def assign_ip(self, name_of_vm, ip, subnet_mask, gateway, dns_list):
         """
         template_vm(self, esx_host, dc_name, ds_name, temp_name):
         It creates a new vm from template.
@@ -563,9 +561,9 @@ class VCenterconnection(object):
         """
         # self.vcenter = obj
         if self.vm_os_type(name_of_vm) == "Windows":
-            print("WWWWWWWWWWWWWWW")
+            print("WINDOWS")
         elif self.vm_os_type(name_of_vm) == "Centos" or self.vm_os_type(name_of_vm) == "Red Hat":
-            print("LLLLLLLLLLLLLL")
+            print("LINUX")
         # import pdb;pdb.set_trace()
         try:
             self.power_off(name_of_vm)
@@ -577,11 +575,11 @@ class VCenterconnection(object):
 
             # if not isDHDCP:
             adaptermap.adapter.ip.ipAddress = ip
-            adaptermap.adapter.subnetMask = '255.255.255.0'
-            adaptermap.adapter.gateway = '192.168.122.1'
+            adaptermap.adapter.subnetMask = subnet_mask
+            adaptermap.adapter.gateway = gateway
 
-            globalip = vim.vm.customization.GlobalIPSettings(dnsServerList=['10.130.205.71', '10.130.205.78'])
-
+            # globalip = vim.vm.customization.GlobalIPSettings(dnsServerList=['10.130.205.71', '10.130.205.78'])
+            globalip = vim.vm.customization.GlobalIPSettings(dnsServerList=dns_list)
             # import pdb;pdb.set_trace()
             if self.vm_os_type(name_of_vm) == "Centos" or self.vm_os_type(name_of_vm) == "Red Hat":
                 ident = vim.vm.customization.LinuxPrep(hostName=vim.vm.customization.FixedName(name=name_of_vm))
@@ -612,7 +610,7 @@ class VCenterconnection(object):
                     time.sleep(1)
                 status = task.info.state
                 if status == "success":
-                    print('IP assignmet is successful')
+                    print('IP assignment is successful')
                     time.sleep(1)
                     self.poweron_vm(name_of_vm)
                 if status == "error":

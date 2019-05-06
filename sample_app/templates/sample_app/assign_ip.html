@@ -2,51 +2,73 @@
 {% block content %}
 
 <div class="mx-auto" style="width: 600px;">
-        <div class="mycard mb-4 border">
-            <div class="card-body" align="center">
-                <h2 class="card-title">Assign new IP to Virtual Machine</h2>
-                <!--<h4 class="card-title">VM Creation</h4>-->
-                <br>
-                <form method="post" action="/RTOSLAAutomation/assign_ip" role="form" id="form_id">
-                    <div class="form-group row">
-                        <label for="vm_name" class="col-5 col-form-label-lg">VM Name</label>
-                        <div class="col-7">
-                            <input type="text" class="form-control form-control-lg" id="vm_name"
-                                   name="vm_name" placeholder="eg. Template_name-test" required>
-                        </div>
+    <div class="mycard mb-4 border">
+        <div class="card-body" align="center">
+            <h2 class="card-title">Assign new IP to Virtual Machine</h2>
+            <!--<h4 class="card-title">VM Creation</h4>-->
+            <br>
+            <form method="post" action="/RTOSLAAutomation/assign_ip/" role="form" id="form_id"
+                  onsubmit="btn.disabled=true; btn.innerText='Assigning IPs. Please Wait';">
+                <div class="form-group row">
+                    <label for="vm_name" class="col-5 col-form-label-lg">VM Name</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control form-control-lg" id="vm_name"
+                               name="vm_name" placeholder="eg. Template_name-test" required>
                     </div>
-                    <div class="form-group row">
-                        <label for="ip_add" class="col-5 col-form-label-lg">IP Address</label>
-                        <div class="col-7">
-                            <input type="text" class="form-control form-control-lg" id="ip_add"
-                                   name="ip_addr" placeholder="IP address" required>
-                        </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ip_add" class="col-5 col-form-label-lg">IP Address</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control form-control-lg" id="ip_add"
+                               name="ip_addr" placeholder="IP address" required>
                     </div>
-                     <div class="form-group row">
+                </div>
+                <div class="form-group row">
                     <div class="col-6 col-form-label-lg">
-                        <label for="validationTooltip04">Start Range</label>
-                        <input type="number" min="0" class="form-control" id="validationTooltip04" placeholder="0"
+                        <label for="start_range">Start Range</label>
+                        <input type="number" min="0" class="form-control" id="start_range" placeholder="0"
                                onselect="validationTooltip05.min=validationTooltip04.val" name="s_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
                         </div>
                     </div>
-
                     <div class="col-6 col-form-label-lg">
-                        <label for="validationTooltip05">End Range</label>
-                        <input type="number" class="form-control" id="validationTooltip05" placeholder="0"
+                        <label for="end_range">End Range</label>
+                        <input type="number" class="form-control" id="end_range" placeholder="0"
+                               onclick="end_range.min=start_range.value; end_range.placeholder=start_range.value;"
                                name="e_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
                         </div>
                     </div>
                 </div>
-
-
-                    <button class="btn btn-primary btn-lg" id="buttonid" type="submit">Add IP</button>
-
-                </form>
-            </div>
+                <div class="form-group row">
+                    <div class="col-6 col-form-label-lg">
+                        <label for="subnet">Subnet Mask</label>
+                        <input type="text" class="form-control" id="subnet"
+                               name="subnet_mask" placeholder="Subnet mask" required>
+                    </div>
+                    <div class="col-6 col-form-label-lg">
+                        <label for="gateway">Gateway</label>
+                        <input type="text" class="form-control" id="gateway"
+                               name="gateway" placeholder="Gateway" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-6 col-form-label-lg">
+                        <label for="dns1">DNS1</label>
+                        <input type="text" class="form-control" id="dns1"
+                               name="dns1" placeholder="DNS1" required>
+                    </div>
+                    <div class="col-6 col-form-label-lg">
+                        <label for="dns2">DNS2</label>
+                        <input type="text" class="form-control" id="dns2"
+                               name="dns2" placeholder="DNS2">
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg" id="btn" type="submit">Assign IP</button>
+            </form>
         </div>
     </div>
+</div>
 {% endblock content %}

@@ -21,7 +21,7 @@ def vcenter_creds(request):
     password = request.POST['password']
     obj.connect_to_vcenter(hostname, username, password)
     print(dir(obj))
-    return redirect(request, '/RTOSLAAutomation/VcenterCredsForm/')
+    return redirect('/RTOSLAAutomation/VcenterCredsForm/')
 
 
 def deployment_page_form(request):
@@ -49,7 +49,7 @@ def vm_delete(request):
     s_range = int(request.POST['s_range'])
     e_range = int(request.POST['e_range'])
     obj.Multi_vm_delete(vm_name, s_range, e_range)
-    return redirect(request, '/RTOSLAAutomation/VmDeleteForm')
+    return redirect('/RTOSLAAutomation/VmDeleteForm')
 
 
 def assign_ips_form(request):
@@ -59,10 +59,15 @@ def assign_ips_form(request):
 def assign_ips(request):
     vm_name = request.POST['vm_name']
     ip_addr = request.POST['ip_addr']
+    subnet_mask = request.POST['subnet_mask']
+    gateway = request.POST['gateway']
+    dns1 = request.POST['dns1']
+    dns2 = request.POST['dns2']
+    dns_list = [dns1, dns2]
     s_range = int(request.POST['s_range'])
     e_range = int(request.POST['e_range'])
-    obj.Multi_static_ips(vm_name, ip_addr, s_range, e_range)
-    return redirect(request, '/RTOSLAAutomation/AssignIPForm/')
+    obj.Multi_static_ips(vm_name, ip_addr,s_range, e_range, subnet_mask, gateway, dns_list)
+    return redirect('/RTOSLAAutomation/AssignIPForm/')
 
 
 def add_nic_form(request):
@@ -78,5 +83,5 @@ def add_nic(request):
         new_name = vm_name + "%s" % i
         obj.remove_nic(new_name)
         obj.add_nic(new_name, port_grp)
-    return redirect(request, '/RTOSLAAutomation/AddNicForm/')
+    return redirect('/RTOSLAAutomation/AddNicForm/')
 

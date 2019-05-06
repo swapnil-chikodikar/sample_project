@@ -6,7 +6,8 @@
             <h2 class="card-title">Add new NIC to Virtual Machine</h2>
             <!--<h4 class="card-title">VM Creation</h4>-->
             <br>
-            <form method="POST" action="/RTOSLAAutomation/add_nic/" id="form_id">
+            <form method="POST" action="/RTOSLAAutomation/add_nic/" id="form_id"
+                  onsubmit="btn.disabled=true; btn.innerText='Adding NICs. Please Wait';">
                 {% csrf_token %}
                 <div class="form-group row">
                     <label for="vm_name" class="col-5 col-form-label">VM Name</label>
@@ -15,11 +16,24 @@
                                name="vm_name" placeholder="eg. Template_name-test">
                     </div>
                 </div>
+                <!--<div class="form-group row">-->
+                <!--<label for="port_name" class="col-5 col-form-label">Port Group Name</label>-->
+                <!--<div class="col-7">-->
+                <!--<input type="text" class="form-control" id="port_name"-->
+                <!--name="port_grp" placeholder="port name">-->
+                <!--</div>-->
+                <!--</div>-->
                 <div class="form-group row">
                     <label for="port_name" class="col-5 col-form-label">Port Group Name</label>
                     <div class="col-7">
-                        <input type="text" class="form-control" id="port_name"
-                               name="port_grp" placeholder="port name">
+                        <select id="port_name" name="port_grp" class="form-control">
+                            <option value="" selected disabled hidden>Choose NIC</option>
+                            <option value="VLAN222-crsrsla-prod">VLAN222-crsrsla-prod</option>
+                            <option value="VLAN223-crsrsla-web">VLAN223-crsrsla-web</option>
+                            <option value="VLAN230-crsrsla-app">VLAN230-crsrsla-app</option>
+                            <option value="VLAN231-crsrsla-db">VLAN231-crsrsla-db</option>
+                            <option value="VLAN246-PublicCloud">VLAN246-PublicCloud</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-row">
@@ -33,16 +47,16 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="end_range" class="col-5 col-form-label">End Range</label>
-                        <input type="number" min="0" class="form-control" id="end_range" placeholder="0"
+                        <input type="number"
+                               onclick="end_range.min=start_range.value; end_range.placeholder=start_range.value;"
+                               class="form-control" id="end_range" placeholder="0"
                                name="e_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
                         </div>
                     </div>
                 </div>
-
-                <button class="btn btn-primary" id="buttonid" type="submit">Add NIC</button>
-
+                <button class="btn btn-primary" id="btn" type="submit">Add NIC</button>
             </form>
         </div>
     </div>

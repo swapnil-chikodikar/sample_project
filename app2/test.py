@@ -93,3 +93,12 @@
 # <!--</div>-->
 # <!--<br>-->
 
+# for i in range(3,4):
+#     new_name = "name" + "%s" %i
+#     print(new_name)
+#     onclick = "end_range.min=start_range.value"
+
+dns1 = 10.12
+dns2 = 10.14
+dns_list = [dns1, dns2]
+print(dns_list)

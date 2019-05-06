@@ -3,7 +3,7 @@ from sample_app import views
 
 
 urlpatterns = [
-    url(r'VCenterCredsForm/', views.vcenter_creds_form, name='sample_app-vcentercreds'),
+    url(r'VCenterCredsForm/', views.vcenter_creds_form),
     url(r'^vcenter_creds/$', views.vcenter_creds),
     url(r'^DeploymentForm/$', views.deployment_page_form),
     url(r'^deployment/$', views.vm_deployment),
