@@ -33,7 +33,7 @@
                     <div class="col-md-6 mb-3">
                         <label for="end_range">End Range</label>
                         <input type="number" min="0" class="form-control" id="end_range" placeholder="0"
-                               onclick="end_range.min=start_range.value; end_range.placeholder=start_range.value;"
+                               onclick="end_range.min=(Number(start_range.value) + Number(1)); end_range.placeholder=(Number(start_range.value) + Number(1));"
                                name="e_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
@@ -46,6 +46,12 @@
         </div>
     </div>
 </div>
+<p align="right">
+    <a href="/RTOSLAAutomation/DeploymentForm/">Go to VM Deployment</a><br>
+    <a href="/RTOSLAAutomation/AssignIPForm/">Go to Assigning static IPs</a><br>
+    <!--<a href="/RTOSLAAutomation/VmDeleteForm/">Go to VM Delete</a><br>-->
+    <a href="/RTOSLAAutomation/AddNicForm/">Go to Add NIC</a><br>
+</p>
 
 <br>
 

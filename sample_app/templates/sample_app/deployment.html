@@ -40,20 +40,80 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-4 mb-3"><label for="exampleFormControlSelect1">Select Template</label>
-                        <select class="form-control" name="temp_name" id="exampleFormControlSelect1" required>
-                            <option value="" selected disabled hidden>Choose template</option>
-                            <div class="invalid-tooltip">
-                                Please select at least one Template.
-                            </div>
-                            <option value="AD-win2012-bkp">AD-win2012-bkp</option>
-                            <option value="APP-rhel7">APP-rhel7</option>
-                            <option value="APP-win12-bkp">APP-win12-bkp</option>
-                            <option value="APP-win-latest">APP-win-latest</option>
-                            <option value="Auto-win12.bkp">Auto-win12.bkp</option>
-                            <option value="Mysql-rhel7-Template">Mysql-rhel7-Template</option>
-                            <option value="SQL-win12-bkp">SQL-win12-bkp</option>
-                        </select>
+                    <select class="form-control" name="temp_name" id="exampleFormControlSelect1" required>
+                    <option value="" selected disabled hidden>Choose template</option>
+                    <div class="invalid-tooltip">
+                    Please select at least one Template.
                     </div>
+                    <option value="AD-win2012-bkp">AD-win2012-bkp</option>
+                    <option value="APP-rhel7">APP-rhel7</option>
+                    <option value="APP-win12-bkp">APP-win12-bkp</option>
+                    <option value="APP-win-latest">APP-win-latest</option>
+                    <option value="Auto-win12.bkp">Auto-win12.bkp</option>
+                    <option value="Mysql-rhel7-Template">Mysql-rhel7-Template</option>
+                    <option value="SQL-win12-bkp">SQL-win12-bkp</option>
+                    </select>
+                    </div>
+
+                    <!--<div class="col-md-4 mb-3"><label>Select Template</label>-->
+                        <!--<button id="mySelect" class="dropbtn dropdown-toggle form-control" type="button"-->
+                                <!--data-toggle="dropdown" >-->
+                            <!--<span id="selected">Choose option</span>-->
+                            <!--<span class="caret"></span></a>-->
+                        <!--</button>-->
+                        <!--<ul class="dropdown-menu dropdown-content" role="menu">-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: MS Windows Server2012(64-bit), VM Version: 11, CPU: 2 vCPU, Memory: 4096MB"-->
+                                  <!--&gt;AD-win2012-bkp</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: Cent OS 4/5/6/7(64-bit), VM Version: 11, CPU: 6 vCPU, Memory: 16384MB"-->
+                                   <!--&gt;APP-rhel7</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: MS Windows Server2012(64-bit), VM Version: 11, CPU: 2 vCPU, Memory: 4096MB"-->
+                                   <!--&gt;APP-win12-bkp</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: MS Windows Server2012(64-bit), VM Version: 11, CPU: 6 vCPU, Memory: 16384MB"-->
+                                   <!--&gt;APP-win-latest</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: MS Windows Server2012(64-bit), VM Version: 11, CPU: 2 vCPU, Memory: 4096MB"-->
+                                   <!--&gt;Auto-win12.bkp</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: Cent OS 4/5/6/7(64-bit), VM Version: 11, CPU: 2 vCPU, Memory: 4096MB"-->
+                                   <!--&gt;Mysql-rhel7-Template</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<li role="menuitem">-->
+                                <!--<a class="dropdown-item" data-toggle="popover" data-trigger="hover"-->
+                                   <!--title="Description"-->
+                                   <!--data-content="OS: MS Windows Server2012(64-bit), VM Version: 11, CPU: 2 vCPU, Memory: 4096MB"-->
+                                   <!--&gt;SQL-win12-bkp</a>-->
+                            <!--</li>-->
+
+                        <!--</ul>-->
+                    <!--</div>-->
+
                     <div class="col-md-4 mb-3">
                         <label for="start_range">Start Range</label>
                         <input type="number" min="0" class="form-control" id="start_range" placeholder="0"
@@ -66,7 +126,7 @@
                     <div class="col-md-4 mb-3">
                         <label for="end_range">End Range</label>
                         <input type="number" class="form-control" id="end_range" placeholder="0"
-                               onclick="end_range.min=start_range.value; end_range.placeholder=start_range.value;"
+                               onclick="end_range.min=(Number(start_range.value) + Number(1)); end_range.placeholder=(Number(start_range.value) + Number(1));"
                                name="e_range" required>
                         <div class="invalid-tooltip">
                             Please select at least one VM.
@@ -101,9 +161,44 @@
 
         </div>
     </div>
-
 </div>
+
+<p align="right">
+    <!--<a href="/RTOSLAAutomation/DeploymentForm/">Go to VM Deployment</a><br>-->
+    <a href="/RTOSLAAutomation/AssignIPForm/">Go to Assigning static IPs</a><br>
+    <a href="/RTOSLAAutomation/VmDeleteForm/">Go to VM Delete</a><br>
+    <a href="/RTOSLAAutomation/AddNicForm/">Go to Add NIC</a><br>
+</p>
 
 <br>
 
+<script>
+$(document).ready(
+
+    function()
+    {
+
+        $('.dropdown-menu a').click(function(){
+        $('#selected').text($(this).text());
+        $('[data-toggle="popover"]').popover();
+    });
+
+    }
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
 {% endblock content %}
+

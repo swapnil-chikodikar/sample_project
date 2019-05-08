@@ -40,6 +40,7 @@ class VCenterconnection(object):
             self.connect = SmartConnect(host=hostname,
                                         user=username, pwd=password, certFile=certFile)
             msg = "Successfull connection"
+
             print(msg)
             return self.connect, msg
         except vim.fault.InvalidLogin as error:
